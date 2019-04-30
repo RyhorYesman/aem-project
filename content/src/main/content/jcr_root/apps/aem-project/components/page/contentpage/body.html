@@ -1,28 +1,5 @@
-<h1>Hello, this is 'Contentpage' component</h1>
-<h2>
-    <span>Using </span>
-    <span><a href="https://docs.adobe.com/content/help/en/experience-manager-htl/using/htl/global-objects.html">HTL Global Objects</a></span>
-</h2>
-<div>
-    <h3>Enumerable Objects</h3>
-    <h4>Getting all properties by 'data-sly-list="\${properties}':</h4>
-    <ul data-sly-list="${properties}">
-        <li>${item}</li>
-    </ul>
-</div>
-<div>
-    <h3>Java-backed Objects</h3>
-    <ul>
-        <li>\${<b>component</b>.resourceType} : ${component.resourceType}</li>
-        <li>\${<b>currentPage</b>.contentResource.resourceType} : ${currentPage.contentResource.resourceType}</li>
-        <li>\${<b>currentNode</b>.parent.name} : ${currentNode.parent.name}</li>
-        <li>\${<b>currentSession</b>.userID} : ${currentSession.userID}</li>
-        <li>\${<b>currentDesign</b>.path} : ${currentDesign.path}</li>
-        <li>\${'dd-MMMM-yyyy hh:mm:ss' @ format=currentPage.lastModified, locale='ru'} : ${'dd-MMMM-yyyy hh:mm:ss' @ format=currentPage.lastModified, locale='ru'}</li>
-    </ul>
-</div>
-<div>
-    <h4>Getting the 'Title' by \${properties.jcr:title} : ${properties.jcr:title}</h4>
-    <h4>Getting the 'Path' by \${currentPage.path} : ${currentPage.path}</h4>
-    <h4>Getting the 'Depth' by \${currentNode.depth} : ${currentNode.depth}</h4>
+<div class="body">
+    <sly data-sly-include="header.html"/>
+    <sly data-sly-include="content.html"/>
+    <sly data-sly-include="footer.html"/>
 </div>
